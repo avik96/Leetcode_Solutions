@@ -1,9 +1,12 @@
 class Solution:
     def countOdds(self, low: int, high: int) -> int:
-        n = (high - low) // 2
+        nums = (high - low + 1)
         
-        if (low %2 != 0 or high %2 != 0) :
-            n += 1
-        
-        return n
+        if (nums %2 == 0):
+            return (nums//2)
+        else:
+            if (low % 2 == 0):
+                return (nums//2)
+            else:
+                return ((nums//2) +1)
         
